@@ -3,8 +3,31 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color:black;
 }
 
+h1 {
+  color: white;
+}
+
+h2 {
+  color: white;
+}
+
+p {
+  color: white;
+}
+.header {
+  color: white;
+}
+.text {
+  color: white;
+}
+.button {
+  color: white;
+  background-color: black;
+  
+}
 .logo {
   height: 6em;
   padding: 1.5em;
