@@ -2,11 +2,41 @@
 /* . targers className */
 
 
+#search {
+  background-color: rgb(218, 107, 29);
+  border-radius: 10px;
+  margin: 5px;
+}
+
+#search:hover {
+  border-color: white;
+  background-color: rgb(191, 86, 29);
+  color: white;
+}
 
 #posts-index img {
   width: 300px;
 }
 
+.textbox {
+  background-color: rgb(218, 107, 29);
+  border-radius: 10px;
+  color: black;
+  padding: 5px;
+  margin: 5px;
+}
+
+.textbox:hover {
+  border-color: white;
+  background-color: rgb(191, 86, 29);
+  color: white;
+}
+
+.textbox::selection {
+  border-color: white;
+  background-color: rgb(191, 86, 29);
+  color: white;
+}
 html {
   scroll-behavior: smooth;
   text-align: center;
@@ -18,10 +48,15 @@ body {
 }
 
 .button {
-  background-color: rgb(226, 115, 36);
+  color: white;
+  background-color: rgb(0, 0, 0);
   border-radius: 10px;
 }
 
+.button:hover{
+  color: red;
+  background-color: gray;
+}
 header a {
   color: white;
 }

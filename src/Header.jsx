@@ -12,6 +12,9 @@ export function Header() {
       <a className="header" href="#posts-new">
         New post
       </a>
+      <div>
+        <input type="search" name="#" id="search" placeholder="Search Here" />
+      </div>
     </header>
   );
 }
