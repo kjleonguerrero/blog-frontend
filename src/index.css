@@ -1,7 +1,32 @@
+/* # targets id */
+/* . targers className */
+
+
+
 #posts-index img {
   width: 300px;
 }
 
 html {
   scroll-behavior: smooth;
+  text-align: center;
+  background-color: black;
+}
+
+body {
+  color: white;
+}
+
+.button {
+  background-color: rgb(226, 115, 36);
+  border-radius: 10px;
+}
+
+header a {
+  color: white;
+}
+
+header a:hover {
+  background-color: gray;
+  color: red;
 }
