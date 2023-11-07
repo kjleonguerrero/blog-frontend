@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 export function PostsIndex(props) {
   console.log(props);
 
@@ -10,7 +11,9 @@ export function PostsIndex(props) {
           <h2>{post.title}</h2>
           <img src={post.image} alt="food pics" />
           <p>{post.body} </p>
-          <button className="button">More info!</button>
+          <button className="button" onClick={props.onShowPost}>
+            More info!
+          </button>
         </div>
       ))}
     </div>
