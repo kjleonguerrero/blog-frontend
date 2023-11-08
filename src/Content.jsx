@@ -9,6 +9,8 @@ export function Content() {
 
   const [posts, setPosts] = useState([]);
 
+  const [currentPost, setCurrentPost] = useState({});
+
   const handleIndexPosts = () => {
     axios.get("http://localhost:3000/posts.json").then((response) => {
       console.log(response.data);
@@ -16,8 +18,9 @@ export function Content() {
     });
   };
 
-  const handleShowPost = () => {
+  const handleShowPost = (post) => {
     setIsPostShowVisible(true);
+    setCurrentPost(post);
   };
 
   const handleClose = () => {
@@ -32,7 +35,8 @@ export function Content() {
       {/* <button onClick={handleIndexPosts}>Load Posts</button> */}
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
-        <p className="modal-text">TEST</p>
+        <h2 className="modal-text">{currentPost.title}</h2>
+        <h2 className="modal-text">{currentPost.body}</h2>
       </Modal>
     </div>
   );
