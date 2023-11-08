@@ -36,8 +36,6 @@ export function Content() {
       {/* <button onClick={handleIndexPosts}>Load Posts</button> */}
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
-        {/* <h2 className="modal-text">{currentPost.title}</h2>
-        <h2 className="modal-text">{currentPost.body}</h2> */}
         <PostsShow post={currentPost} />
       </Modal>
     </div>
