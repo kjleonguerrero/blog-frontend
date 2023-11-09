@@ -12,7 +12,7 @@ export function PostsIndex(props) {
           <img src={post.image} alt="food pics" />
           {/* <p>{post.body} </p> */}
           <div>
-            <button className="button" onClick={() => props.onShowPost(post)}>
+            <button className="button" data-bs-toggle="modal" onClick={() => props.onShowPost(post)}>
               More info!
             </button>
           </div>

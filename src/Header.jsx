@@ -75,7 +75,7 @@ export function Header() {
         </div>
       </nav>
       {/* // Old Nav Bar */}
-      <a className="header" href="#">
+      {/* <a className="header" href="#">
         Home
       </a>{" "}
       |{" "}
@@ -88,7 +88,7 @@ export function Header() {
       </a>
       <div>
         <input type="search" name="#" id="search" placeholder="Search Here" />
-      </div>
+      </div> */}
     </header>
   );
 }
