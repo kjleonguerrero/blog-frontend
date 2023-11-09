@@ -4,7 +4,7 @@ export function PostsIndex(props) {
 
   return (
     <div id="posts-index">
-      <h3 className="text">All Posts!</h3>
+      <h1 className="text">All Posts!</h1>
       {/* loop of defined recipe data props from the parent component */}
       {props.posts.map((post) => (
         <div key={post.id}>
@@ -12,7 +12,13 @@ export function PostsIndex(props) {
           <img src={post.image} alt="food pics" />
           {/* <p>{post.body} </p> */}
           <div>
-            <button className="button" data-bs-toggle="modal" onClick={() => props.onShowPost(post)}>
+            <button
+              type="button"
+              className="btn btn-primary btn-danger"
+              data-bs-toggle="modal"
+              data-bs-target="#exampleModal"
+              onClick={() => props.onShowPost(post)}
+            >
               More info!
             </button>
           </div>

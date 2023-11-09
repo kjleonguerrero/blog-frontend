@@ -58,7 +58,9 @@ export function PostsNew() {
             aria-describedby="addon-wrapping"
           />
         </div>
-        <button type="submit">Create a new post</button>
+        <button className="btn btn-danger" type="submit">
+          Create a new post
+        </button>
       </form>
     </div>
   );
