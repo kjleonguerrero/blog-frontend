@@ -31,7 +31,7 @@ export function PostsNew() {
         </div>
         <div className="input-group flex-nowrap">
           <span className="input-group-text" id="addon-wrapping">
-            Image URL
+            Image
           </span>
           <input
             name="image"
