@@ -37,7 +37,7 @@ export function Content() {
   useEffect(handleIndexPosts, []);
 
   return (
-    <div className="container">
+    <div className="container text-center">
       <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
