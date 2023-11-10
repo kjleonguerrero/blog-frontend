@@ -1,62 +1,46 @@
-import axios from "axios";
-
-export function PostsNew() {
+export function PostsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("handle submit");
     const params = new FormData(event.target);
-    axios
-      .post("http://localhost:3000/posts.json", params)
-      .then((response) => {
-        console.log(response.data);
-        event.target.reset();
-      })
-      .catch((error) => {
-        console.log(error.response.data.errors);
-      });
+    console.log("handle submit");
+    props.onCreatePost(params);
+    event.target.reset();
   };
+
   return (
     <div id="posts-new">
       <h1>Create a New Post</h1>
       <form onSubmit={handleSubmit}>
-        <div className="input-group flex-nowrap">
-          <span className="input-group-text" id="addon-wrapping">
-            Title
-          </span>
-          <input
-            name="title"
-            type="text"
-            className="form-control"
-            placeholder="Title Here"
-            aria-label="Username"
-            aria-describedby="addon-wrapping"
-          />
+        <div className="row">
+          <div className="col">
+            <input
+              name="title"
+              type="text"
+              className="form-control"
+              placeholder="Title Here"
+              aria-label="First name"
+            ></input>
+          </div>
+          <div className="col">
+            <input
+              name="body"
+              type="text"
+              className="form-control"
+              placeholder="Body Here"
+              aria-label="Last name"
+            ></input>
+          </div>
         </div>
-        <div className="input-group flex-nowrap">
-          <span className="input-group-text" id="addon-wrapping">
-            Body
-          </span>
-          <input
-            name="body"
-            type="text"
-            className="form-control"
-            placeholder="Body Here"
-            aria-label="Username"
-            aria-describedby="addon-wrapping"
-          />
-        </div>
-        <div className="input-group flex-nowrap">
-          <span className="input-group-text" id="addon-wrapping">
-            Image
-          </span>
-          <input
-            name="image"
-            type="text"
-            className="form-control"
-            placeholder="URL Here"
-            aria-label="Username"
-            aria-describedby="addon-wrapping"
-          />
+        <div className="row">
+          <div className="col">
+            <input
+              name="image"
+              type="text"
+              className="form-control"
+              placeholder="Image URL Here"
+              aria-label="First name"
+            ></input>
+          </div>
         </div>
         <button className="btn btn-danger" type="submit">
           Create a new post
