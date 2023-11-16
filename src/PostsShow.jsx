@@ -25,11 +25,11 @@ export function PostsShow(props) {
         <div>
           Image: <input defaultValue={props.post.image} name="image" type="text" />
         </div>
-        <button type="submit" data-bs-dismiss="modal" className="btn btn-secondary">
+        <button type="submit" data-bs-dismiss="modal" className="btn btn-secondary btn-danger">
           Update Post
         </button>
       </form>
-      <button onClick={handleClick} data-bs-dismiss="modal" className="btn btn-secondary">
+      <button onClick={handleClick} data-bs-dismiss="modal" className="btn btn-secondary btn-danger">
         Delete Post
       </button>
     </div>

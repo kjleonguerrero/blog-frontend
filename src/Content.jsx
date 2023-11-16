@@ -60,7 +60,7 @@ export function Content() {
 
   return (
     <div className="container text-center">
-      <h2>Sign Up Today!</h2>
+      <h1>Sign Up Today!</h1>
       <Signup />
       <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />

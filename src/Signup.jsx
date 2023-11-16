@@ -6,7 +6,7 @@ export function Signup() {
     const params = new FormData(event.target);
     console.log("handleSubmit", params);
     axios
-      .post("http://localhost:300/users.json", params)
+      .post("http://localhost:3000/users.json", params)
       .then((response) => {
         console.log(response.data);
         event.target.reset();
@@ -31,7 +31,9 @@ export function Signup() {
         <div>
           Password Confirmation: <input name="password_confirmation" type="password" />
         </div>
-        <button type="submit">Sign Up!</button>
+        <button type="submit" className="btn btn-secondary btn-danger">
+          Sign Up!
+        </button>
       </form>
     </div>
   );
