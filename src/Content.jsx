@@ -5,6 +5,8 @@ import { PostsNew } from "./PostsNew";
 import { PostsShow } from "./PostsShow";
 import { Modal } from "./Modal";
 import { Signup } from "./Signup";
+import { Login } from "./login";
+import { LogoutLink } from "./logoutlink";
 
 export function Content() {
   const [isPostsShowVisible, setIsPostShowVisible] = useState(false);
@@ -60,8 +62,10 @@ export function Content() {
 
   return (
     <div className="container text-center">
-      <h1>Sign Up Today!</h1>
+      <h2>Sign Up Today!</h2>
       <Signup />
+      <Login />
+      <LogoutLink />
       <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
