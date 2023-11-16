@@ -49,6 +49,7 @@ export function Content() {
 
   const handleDestroyPost = (post) => {
     axios.delete(`http://localhost:3000/posts/${post.id}.json`).then((response) => {
+      console.log(response.data);
       setPosts(posts.filter((r) => r.id !== post.id));
       handleClose();
     });
