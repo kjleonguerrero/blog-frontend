@@ -8,6 +8,7 @@ import { Modal } from "./Modal";
 import { Signup } from "./Signup";
 import { Login } from "./login";
 import { LogoutLink } from "./logoutlink";
+import { Home } from "./home";
 
 export function Content() {
   const [isPostsShowVisible, setIsPostShowVisible] = useState(false);
@@ -64,14 +65,13 @@ export function Content() {
   return (
     <div className="container text-center">
       <Routes>
+        <Route path="/home" element={<Home />} />
         <Route path="/signup" element={<Signup />} />
-      </Routes>
-      <Routes>
         <Route path="/login" element={<Login />} />
+        <Route path="/posts" element={<PostsIndex posts={posts} onShowPost={handleShowPost} />} />
+        <Route path="/posts/new" element={<PostsNew onCreatePost={handleCreatePost} />} />
+        <Route path="/logoutlink" element={<LogoutLink />} />
       </Routes>
-      <LogoutLink />
-      <PostsNew onCreatePost={handleCreatePost} />
-      <PostsIndex posts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
       </Modal>
