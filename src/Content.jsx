@@ -66,8 +66,9 @@ export function Content() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
       </Routes>
-      <Signup />
-      <Login />
+      <Routes>
+        <Route path="/login" element={<Login />} />
+      </Routes>
       <LogoutLink />
       <PostsNew onCreatePost={handleCreatePost} />
       <PostsIndex posts={posts} onShowPost={handleShowPost} />
