@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { Routes, Route } from "react-router-dom";
 import { PostsIndex } from "./PostsIndex";
 import { PostsNew } from "./PostsNew";
 import { PostsShow } from "./PostsShow";
@@ -62,7 +63,9 @@ export function Content() {
 
   return (
     <div className="container text-center">
-      <h2>Sign Up Today!</h2>
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+      </Routes>
       <Signup />
       <Login />
       <LogoutLink />
