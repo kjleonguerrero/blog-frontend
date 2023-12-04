@@ -10,7 +10,7 @@ export function PostsIndex(props) {
         <div key={post.id}>
           <div className="card">
             <h2>{post.title}</h2>
-            <img src={post.image} alt="post pics" />
+            <img className="img-fluid" src={post.image} alt="post pics" />
             {/* <p>{post.body} </p> */}
             <div>
               <button
