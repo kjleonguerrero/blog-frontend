@@ -10,7 +10,15 @@ export function PostsIndex(props) {
     <div id="posts-index">
       <h1 className="text">All Posts!</h1>
       Search filter:{" "}
-      <input type="text" value={searchFilter} onChange={(event) => setSearchFilter(event.target.value)} />
+      <input type="text" value={searchFilter} onChange={(event) => setSearchFilter(event.target.value)} list="titles" />
+      <datalist id="titles">
+        {props.posts.map((post) => (
+          <option key={post.id} value={post.title} />
+        ))}
+      </datalist>
+      <button className="btn btn-primary btn-danger" type="submit">
+        Search
+      </button>
       {/* loop of defined recipe data props from the parent component */}
       {props.posts
         .filter((post) => post.title.toLowerCase().includes(searchFilter.toLowerCase()))
