@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { LogoutLink } from "./logoutlink";
 
 export function Header() {
   return (
@@ -71,18 +72,12 @@ export function Header() {
                 </>
               ) : (
                 <li className="nav-item">
-                  <Link className="nav-link" to="/logoutlink">
-                    Logout
-                  </Link>
+                  <a className="nav-link">
+                    <LogoutLink />
+                  </a>
                 </li>
               )}
             </ul>
-            <form className="d-flex" role="search">
-              <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-              <button className="btn btn-danger" type="button">
-                Search
-              </button>
-            </form>
           </div>
         </div>
       </nav>
