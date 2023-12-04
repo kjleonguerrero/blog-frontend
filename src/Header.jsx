@@ -62,7 +62,9 @@ export function Header() {
               {localStorage.jwt === undefined ? (
                 <>
                   <li className="nav-item">
-                    <a className="nav-link">Signup</a>
+                    <Link className="nav-link" to="/signup">
+                      Signup
+                    </Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link" to="/login">
