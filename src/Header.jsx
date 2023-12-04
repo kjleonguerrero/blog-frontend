@@ -58,21 +58,24 @@ export function Header() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item">
-                <Link to="/signup" className="nav-link">
-                  Sign up
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/login" className="nav-link">
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link to="/logoutlink" className="nav-link">
-                  Logout
-                </Link>
-              </li>
+              {localStorage.jwt === undefined ? (
+                <>
+                  <li className="nav-item">
+                    <a className="nav-link">Signup</a>
+                  </li>
+                  <li className="nav-item">
+                    <Link className="nav-link" to="/login">
+                      Login
+                    </Link>
+                  </li>
+                </>
+              ) : (
+                <li className="nav-item">
+                  <Link className="nav-link" to="/logoutlink">
+                    Logout
+                  </Link>
+                </li>
+              )}
             </ul>
             <form className="d-flex" role="search">
               <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
@@ -83,21 +86,6 @@ export function Header() {
           </div>
         </div>
       </nav>
-      {/* // Old Nav Bar */}
-      {/* <a className="header" href="#">
-        Home
-      </a>{" "}
-      |{" "}
-      <a className="header" href="#posts-index">
-        All posts
-      </a>{" "}
-      |{" "}
-      <a className="header" href="#posts-new">
-        New post
-      </a>
-      <div>
-        <input type="search" name="#" id="search" placeholder="Search Here" />
-      </div> */}
     </header>
   );
 }
