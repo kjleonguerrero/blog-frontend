@@ -11,7 +11,7 @@ export function Signup() {
     const params = new FormData(event.target);
     console.log("handleSubmit", params);
     axios
-      .post("http://localhost:3000/users.json", params)
+      .post("https://blog-frontend-ikpb.onrender.com/users.json", params)
       .then((response) => {
         console.log(response.data);
         event.target.reset();
